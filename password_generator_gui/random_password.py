@@ -16,7 +16,7 @@ home_canvas.create_image(0,0,image=bg_img,anchor="nw")
 
 def next_window():
     main_window=Toplevel()
-    main_window.title('View all Books')
+    main_window.title('Generate Password')
     main_window.geometry('375x370')
     icon=PhotoImage(file="pass_icon.png")
     main_window.iconphoto(False,icon)
@@ -77,7 +77,7 @@ def next_window():
     pass_list.place(x=30,y=185)
     btn_close.place(x=135,y=325)
 
-create_btn=Button(password_window,text="Create",font="Helvetica 10 bold",padx=10,background='black',foreground='white',command=next_window)
+create_btn=Button(password_window,text="Create",font="Helvetica 10 bold",padx=10,background='black',foreground='white',activebackground='black',activeforeground='#0EBDFF',command=next_window)
 btn_window=home_canvas.create_window(150,315,anchor="nw",window=create_btn)
 
 password_window.mainloop()
